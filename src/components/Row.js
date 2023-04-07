@@ -36,9 +36,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
     } else {
       movieTrailer(null, { tmdbId: movie?.id })
         .then((url) => {
-          console.log(url);
-          const urlParams = new URLSearchParams(new URL(url).search);
-          setTrailerUrl(urlParams.get("v"));
+          window.open(url, "_blank");
+          // console.log(url);
+          // const urlParams = new URLSearchParams(new URL(url).search);
+          // setTrailerUrl(urlParams.get("v"));
         })
         .catch((error) => console.log("i'm here", error));
     }
@@ -53,6 +54,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
       <div className="row_posters">
         {movies.map((movie) => (
           <img
+            title={movie?.name || movie?.title}
             key={movie.id}
             onClick={() => handleClick(movie)}
             className={`row_poster ${isLargeRow && "row_posterLarge"}`}
@@ -63,7 +65,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
           />
         ))}
       </div>
-      {trailerUrl && <Youtube videoID={trailerUrl} opts={opts} />}
+      {/* {trailerUrl && <Youtube videoID={trailerUrl} opts={opts} />} */}
     </div>
   );
 }
