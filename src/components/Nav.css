@@ -20,11 +20,43 @@
   left: 20px;
   width: 80px;
   object-fit: contain;
- 
 }
+
 .nav_avatar {
   position: fixed;
   right: 20px;
   width: 30px;
   object-fit: contain;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 10px;
+    height: 25px;
+  }
+
+  .nav_logo {
+    width: 60px;
+  }
+
+  .nav_avatar {
+    width: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 5px;
+    height: 20px;
+  }
+
+  .nav_logo {
+    width: 40px;
+  }
+
+  .nav_avatar {
+    width: 20px;
+  }
 }

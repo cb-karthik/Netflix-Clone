@@ -3,16 +3,19 @@
   object-fit: contain;
   height: 448px;
 }
+
 .banner_contents {
   margin-left: 30px;
   padding-top: 140px;
   height: 190px;
-} 
+}
+
 .banner_title {
   font-size: 3rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
 }
+
 .banner_description {
   width: 45rem;
   line-height: 1.3;
@@ -21,6 +24,7 @@
   max-width: 360px;
   height: 100px;
 }
+
 .banner_buttons {
   cursor: pointer;
   color: #fff;
@@ -33,19 +37,83 @@
   margin-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background-color: rgba(51, 51, 51,0.6);
+  background-color: rgba(51, 51, 51, 0.6);
 }
-.banner_buttons:hover{
-    counter-reset: rgb(0,0,0);
-    background-color: #716a6a;
-    transition: all 0.2s;
+
+.banner_buttons:hover {
+  counter-reset: rgb(0, 0, 0);
+  background-color: #716a6a;
+  transition: all 0.2s;
 }
-.banner--fadeBottom{
-    height: 7.4rem;
-    background-image: linear-gradient(
-        180deg,
-        transparent,
-        rgba(37,37,37,0.61),
-        #111
-    );
+
+.banner--fadeBottom {
+  height: 7.4rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .banner {
+    height: 300px;
+  }
+
+  .banner_contents {
+    margin-left: 10px;
+    padding-top: 80px;
+    height: 140px;
+  }
+
+  .banner_title {
+    font-size: 2rem;
+  }
+
+  .banner_description {
+    width: 30rem;
+    font-size: 0.6rem;
+    height: 80px;
+  }
+
+  .banner_buttons {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 250px;
+  }
+
+  .banner_contents {
+    margin-left: 5px;
+    padding-top: 50px;
+    height: 100px;
+  }
+
+  .banner_title {
+    font-size: 1.5rem;
+  }
+
+  .banner_description {
+    width: 20rem;
+    font-size: 0.5rem;
+    height: 60px;
+  }
+
+  .banner_buttons {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 0.3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
 }
